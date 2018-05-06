@@ -69,3 +69,84 @@ char names[4][20];		// new 2d variable array to store names of players
 void winner();			// function to calculate winner
 
 //_____________________________________________________________________________________________________________________
+//__________________________________________Main__Function_____________________________________________________________
+void main()
+{
+	int gd,gm; //  graphic variables 
+    detectgraph(&gd,&gm);
+    initgraph(&gd,&gm,"c:/turboc3/bgi");    char orig[15][15]; char test[300][15];
+    int user,choice;
+}
+//_____________________________________________________________________________________________________________________
+//__________________________________________winner_deciding_method_____________________________________________________
+void winner()
+{  clrscr();  cleardevice();
+
+    if(userNumber==2){	
+    		cout<<"\n"<<obj[0].play1<<"'s final score is "<<game::scoreUser1;
+    		cout<<"\n\n\n"<<obj[1].play1<<"'s final score is "<<game::scoreUser2;
+    		
+    		if((game::scoreUser1)>(game::scoreUser2))
+    			{
+        			cout<<"\n"<<obj[0].play1<<" is winner of the game !!!!!! ";           //function decides who is the winner after all characters are finished
+     			}
+
+    		else                                                                     //for 2 users
+     			{
+        			cout<<"\n"<<obj[1].play1<<" is winner of the game !!!!!! ";
+
+     			}
+    		
+    		getch();
+			exit(0);
+    }
+
+    if(userNumber==3){
+    	cout<<"\n"<<obj[0].play1<<"'s final score is "<<game::scoreUser1;
+    	cout<<"\n\n\n"<<obj[1].play1<<"'s final score is "<<game::scoreUser2;
+    	cout<<"\n\n\n"<<obj[2].play1<<"'s final score is "<<game::scoreUser3;
+    	if(((game::scoreUser1)>(game::scoreUser2))&&((game::scoreUser1)>(game::scoreUser3)))
+     		{
+        		cout<<"\n"<<obj[0].play1<<" is winner of the game !!!!!! ";                    //function decides who is the winner after all characters are finished
+     		}
+  		else if(((game::scoreUser2)>(game::scoreUser1))&&((game::scoreUser2)>(game::scoreUser3)))
+     		{
+        		cout<<"\n"<<obj[1].play1<<" is winner of the game !!!!!! ";                   //for 3 users
+
+     		}
+    	else
+     		{
+        		cout<<"\n"<<obj[2].play1<<" is winner of the game !!!!!! ";
+
+     		}
+    	
+    	getch();
+		exit(0);
+	}
+
+    if(userNumber==4){
+    	cout<<"\n"<<obj[0].play1<<"'s final score is "<<game::scoreUser1;
+    	cout<<"\n\n\n"<<obj[1].play1<<"'s final score is "<<game::scoreUser2;         //function decides who is the winner after all characters are finished
+    	cout<<"\n\n\n"<<obj[2].play1<<"'s final score is "<<game::scoreUser3;
+    	cout<<"\n\n\n"<<obj[3].play1<<"'s final score is "<<game::scoreUser4;
+
+    	if(((game::scoreUser1)>(game::scoreUser2))&&((game::scoreUser1)>(game::scoreUser3))&&((game::scoreUser1)>(game::scoreUser4)))
+     		{
+        		cout<<"\n"<<obj[0].play1<<" is winner of the game !!!!!! ";
+     		}
+    	else if(((game::scoreUser2)>(game::scoreUser1))&&((game::scoreUser2)>(game::scoreUser3))&&((game::scoreUser2)>(game::scoreUser4)))
+     		{
+        		cout<<"\n"<<obj[1].play1<<" is winner of the game !!!!!! ";
+     		}
+    	else if(((game::scoreUser3)>(game::scoreUser1))&&((game::scoreUser3)>(game::scoreUser2))&&((game::scoreUser3)>(game::scoreUser4)))
+     		{
+        		cout<<"\n"<<obj[2].play1<<" is winner of the game !!!!!! ";                         //for 4 users
+     		}
+    	else
+    		{ cout<<"\n"<<obj[3].play1<<" is winner of the game !!!!!! ";
+    		}
+    	
+    	getch();
+		exit(0);
+	}
+}
