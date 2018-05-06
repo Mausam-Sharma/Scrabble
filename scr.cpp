@@ -30,6 +30,18 @@ game()			//_____________________________________________________________________
 
 }
 
+ //__________________________________________________Member__Functions___Defined_______________________________________
+ void boardnum(char orig[15][15]);
+ void initial(char orig[15][15]);
+ void playgame(char orig[15][15],char test[300][15],int allScore);
+ void playgameagain(char orig[15][15],char test[300][15],int allScore);
+ void call_random(char orig[15][15]);
+ char input(char orig[15][15]);
+ void coor(char,char orig[15][15]);
+ void reduceAlpha(char,char orig[15][15]);
+ void reduceUser(char,char orig[15][15]);
+ void word(char orig[15][15],char test[300][15],int allScore);
 
 }obj[4];// 4 objects as 4 players are defined
-//____________
+//_____________________________________________________________________________________________________________________
+//_____________________________________________________________________________________________________________________
