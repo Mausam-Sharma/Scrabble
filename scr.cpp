@@ -71,11 +71,124 @@ void winner();			// function to calculate winner
 //_____________________________________________________________________________________________________________________
 //__________________________________________Main__Function_____________________________________________________________
 void main()
-{
-	int gd,gm; //  graphic variables 
+{   int gd,gm; //  graphic variables 
     detectgraph(&gd,&gm);
     initgraph(&gd,&gm,"c:/turboc3/bgi");    char orig[15][15]; char test[300][15];
     int user,choice;
+
+    menu:
+    clrscr(); cleardevice();
+    setcolor(RED);
+    outtextxy(0,5,"SCRABBLE-(4 player)");       //home page
+    setcolor(GREEN);
+    line(0,16,140,16);
+    line(0,19,140,19);
+    settextstyle(0,0,3);
+    outtextxy(10,300,"Created by Mausam Sharma");
+    settextstyle(0,0,0);
+    cout<<"\n\n 1. Start a New Game : \n\n 2. How to Play Game : \n\n 3. Developer info : \n\n 4. EXIT.....";   //game menu
+    cout<<"\n______________________\n\n__Enter__choice__: "; cin>>choice;
+
+    if(choice==4){exit(0);}
+    else if(choice==3)
+    {   clrscr(); cleardevice();
+        cout<<"\n\nName:\tMausam Sharma";
+        cout<<"\n\nCollege:\tNorthern India Engineering College";             // developer info
+        cout<<"\n\nContact:\tmausam.awesome4@gmail.com";
+        getch(); goto menu;
+    }
+    else if(choice==2)
+    {
+        clrscr(); cleardevice();
+        
+    }
+    else if(choice==1)
+{   clrscr(); cleardevice();
+    obj[0].initial(orig);       //initializes the character set and empty gameboard
+    obj[0].boardnum(orig);
+    setcolor(RED);
+    outtextxy(0,5,"SCRABBLE-(4 player)");
+    setcolor(GREEN);
+    line(0,16,140,16);
+    line(0,19,140,19);
+    getch();
+    userchoice:
+    cout<<"\n\nHow many players ??\n( 2/3/4 ) player\n"; cin>>user; if(user==11){exit(0);}      //no. of players selected
+if(user==2)
+{   userNumber=2;
+    cout<<"\nEnter 1st player name :\n"; gets(obj[0].play1); strcpy(names[0],obj[0].play1);
+    cout<<"\nEnter 2nd player name :\n"; gets(obj[1].play1); strcpy(names[1],obj[1].play1);
+    obj[0].playgame(orig,test,0);
+      if((game::chance)==0){ winner();}
+    obj[1].playgame(orig,test,1);
+      if((game::chance)==0){ winner();}
+
+    label1:
+     obj[0].playgameagain(orig,test,0);
+        if((game::chance)==0){ winner();}                       // user info taken if user == 2
+     obj[1].playgameagain(orig,test,1);
+        if((game::chance)==0){ winner();}
+    goto label1;
+}
+else if(user==3)
+{   userNumber=3;
+    cout<<"\nEnter 1st player name :\n"; gets(obj[0].play1);  strcpy(names[0],obj[0].play1);
+    cout<<"\nEnter 2nd player name :\n"; gets(obj[1].play1);  strcpy(names[1],obj[1].play1);
+    cout<<"\nEnter 3rd player name :\n"; gets(obj[2].play1);  strcpy(names[2],obj[2].play1);
+
+     obj[0].playgame(orig,test,0);
+        if((game::chance)==0){ winner();}
+     obj[1].playgame(orig,test,1);
+        if((game::chance)==0){ winner();}
+     obj[2].playgame(orig,test,2);
+        if((game::chance)==0){ winner();}
+
+    label2:
+    obj[0].playgameagain(orig,test,0);
+        if((game::chance)==0){ winner();}
+    obj[1].playgameagain(orig,test,1);
+        if((game::chance)==0){ winner();}                        // user info taken if user == 3
+    obj[2].playgameagain(orig,test,2);
+        if((game::chance)==0){ winner();}
+    goto label2;
+}
+else if(user==4)
+{
+    userNumber=4;
+    cout<<"\nEnter 1st player name :\n"; gets(obj[0].play1); strcpy(names[0],obj[0].play1);
+    cout<<"\nEnter 2nd player name :\n"; gets(obj[1].play1); strcpy(names[1],obj[1].play1);
+    cout<<"\nEnter 3rd player name :\n"; gets(obj[2].play1); strcpy(names[2],obj[2].play1);
+    cout<<"\nEnter 4th player name :\n"; gets(obj[3].play1); strcpy(names[3],obj[3].play1);
+    obj[0].playgame(orig,test,0);
+      if((game::chance)==0){ winner();}
+    obj[1].playgame(orig,test,1);
+      if((game::chance)==0){ winner();}
+    obj[2].playgame(orig,test,2);
+      if((game::chance)==0){ winner();}
+    obj[3].playgame(orig,test,3);
+      if((game::chance)==0){ winner();}                  // user info taken if user == 4
+
+    label3:
+     obj[0].playgameagain(orig,test,0);
+      if((game::chance)==0){ winner();}
+     obj[1].playgameagain(orig,test,1);
+      if((game::chance)==0){ winner();}
+     obj[2].playgameagain(orig,test,2);
+      if((game::chance)==0){ winner();}
+     obj[3].playgameagain(orig,test,3);
+      if((game::chance)==0){ winner();}
+    goto label3;
+}
+else
+{
+   cout<<"\nWrong choice: \nEnter again" ; getch(); goto userchoice;
+}
+    }
+else
+{
+    cout<<"\nWrong choice: \nEnter again" ; goto menu;
+}
+    getch();
 }
 //_____________________________________________________________________________________________________________________
 //__________________________________________winner_deciding_method_____________________________________________________
@@ -150,3 +263,5 @@ void winner()
 		exit(0);
 	}
 }
+
+//________________________________________________________________________________________________________________
