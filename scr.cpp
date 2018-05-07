@@ -100,7 +100,25 @@ void main()
     else if(choice==2)
     {
         clrscr(); cleardevice();
-        
+        cout<<"\n\t\t\t\tRULES OF GAME";
+        cout<<"\n\t\t\t\t_____________";
+		cout<<"\n\n1: This is 2-4 player word forming game.";
+		cout<<"\n\n2: Every player will be given 7 random alphabets from an alphabet set \n";
+    	cout<<"   and player will be allowed to make words from these 7 letters. He is \n";
+		cout<<"   allowed to use letters as much as possible from his/her set of 7 letters.\n";
+		cout<<"   And then player can make a word to fetch a score which is automatically \n ";      // rules of game
+    	cout<<"   calculated. If no word can be formed player can quit his/her turn and\n";
+    	cout<<"   pass turn to next player.";
+    	cout<<"\n\n3: If your word covers a white box, this will fetch double of the letter's score\n   covering white box ";
+    	cout<<"\n\n4: If your word covers a blue box, this will fetch triple of the letter's score\n   covering blue box ";
+		cout<<"\n\n5: If your word covers a pink box, this will double the score of your whole \n   word";
+		cout<<"\n\n6: If your word covers a red box, this will triple the score of your whole \n   word";
+    	cout<<"\n\n7: Letter   a,e,i,l,n,o,r,s,t,u  fetch '1' point";
+    	cout<<"\n   Letter  d,g  fetch 2 point , Letter  b,c,m,p  fetch 3 point";
+    	cout<<"\n   Letter  f,h,v,w,y  fetch 4 point , Letter k  fetch 5 point";
+    	cout<<"\n   Letter  j,x  fetch 8 point , Letter q,z  fetch 10 point ";
+    	
+        getch(); goto menu;
     }
     else if(choice==1)
 {   clrscr(); cleardevice();
