@@ -283,3 +283,99 @@ void winner()
 }
 
 //________________________________________________________________________________________________________________
+//______________________________________playgame again____________________________________________________________
+//________________________________________________________________________________________________________________
+//_______________________________________playgame_________________________________________________________________
+void game::playgame(char orig[15][15],char test[300][15],int allScore)
+{   char inp,cont;        int i;
+    fflush(stdin);
+    clrscr();  cleardevice();  boardnum(orig);
+    cout<<"\n"<<play1<<"'s "<<"turn";
+   setcolor(GREEN);
+    line(0,30,200,30);
+    line(0,32,200,32);
+    cout<<"\n\n letters left : "<<chance;
+    cout<<"\n\nletter set is : \n";
+
+
+    call_random(orig);  cout<<"\n______________________";
+
+    inp=input(orig);                                   //   input function call for alphabet
+
+    cout<<"letter chosen is "<<inp;
+    cout<<"\n____________________";
+    coor(inp,orig);                                           // coordinate input
+    boardnum(orig);
+    reduceAlpha(inp,orig);
+    reduceUser(inp,orig);
+   label3:
+   printf("\nDo u want to use more\nletters ???\n______________________\nPRESS :\n'y' for YES\n'n' to form a WORD\n'm' to quit your turn\n'e' for Exit\n");
+
+    cont=getche();
+if((cont=='n')||(cont=='N'))
+    {word(orig,test,allScore);}
+
+else if((cont=='e')||(cont=='E'))
+    {exit(0);}
+ else if((cont!='e')&&(cont!='E')&&(cont!='m')&&(cont!='M')&&(cont!='n')&&(cont!='N')&&(cont!='y')&&(cont!='Y'))
+   {  clrscr();  cleardevice();  boardnum(orig);
+    cout<<"\n"<<play1<<"'s "<<"turn";
+   setcolor(GREEN);
+    line(0,30,200,30);
+    line(0,32,200,32);
+    cout<<"\n\nYou pressed '"<<cont<<"'";
+    cout<<"\nWrong option opted !!\n______________________"; goto label3;
+   }
+
+
+
+while((cont=='y')||(cont=='Y'))
+{ fflush(stdin);
+    clrscr();  cleardevice();  boardnum(orig);
+    cout<<"\n"<<play1<<"'s "<<"turn";
+   setcolor(GREEN);
+    line(0,30,200,30);
+    line(0,32,200,32);
+    cout<<"\n\n letters left : "<<chance;
+    cout<<"\n\nletter set is : \n";
+
+for(i=0;i<leng1;i++)
+{ printf("%c,",letter1[i]);        // reduced character set
+}
+cout<<"\n______________________";
+    inp=input(orig);                                   //   input function call for alphabet
+
+    cout<<"letter chosen is "<<inp;
+    cout<<"\n____________________";
+    coor(inp,orig);                                           // coordinate input
+    boardnum(orig);
+    reduceAlpha(inp,orig);
+    reduceUser(inp,orig);
+    label4:
+   printf("\nDo u want to use more\nletters ???\n______________________\nPRESS :\n'y' for YES\n'n' to form a WORD\n'm' to quit your turn\n'e' for Exit\n");
+
+    cont=getche();
+    if((cont=='n')||(cont=='N'))
+    {
+        word(orig,test,allScore); break;
+    }
+    else if((cont=='m')||(cont=='M'))
+    {break;}
+
+    else if((cont=='e')||(cont=='E'))
+    {exit(0);}
+     else if((cont!='e')&&(cont!='E')&&(cont!='m')&&(cont!='M')&&(cont!='n')&&(cont!='N')&&(cont!='y')&&(cont!='Y'))
+   {  clrscr();  cleardevice();  boardnum(orig);
+    cout<<"\n"<<play1<<"'s "<<"turn";
+   setcolor(GREEN);
+    line(0,30,200,30);
+    line(0,32,200,32);
+    cout<<"\n\nYou pressed '"<<cont<<"'";
+    cout<<"\nWrong option opted !!\n______________________"; goto label4;
+   }
+
+
+  }
+
+    getch();
+}
