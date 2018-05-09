@@ -284,6 +284,32 @@ void winner()
 
 //________________________________________________________________________________________________________________
 //______________________________________playgame again____________________________________________________________
+void game::playgameagain(char orig[15][15],char test[300][15],int allScore)
+{
+	char inp,cont;        int i;
+    fflush(stdin);
+    clrscr();  cleardevice();  boardnum(orig);
+   cout<<"\n"<<play1<<"'s "<<"turn";
+   setcolor(GREEN);
+    line(0,30,200,30);
+    line(0,32,200,32);                                        //code for playing if users are playing second time with first player given 7 characters
+    cout<<"\n\n letters left : "<<chance;                     //clears out prevous game buffer
+    cout<<"\n\nletter set is : \n";
+
+
+    randomize();
+for(i=leng1;i<7;i++)
+{
+j[i]=random(chance);                                    //randomly gives 7 characters to a user
+letter1[i]=alpha[j[i]];
+leng1++;
+  }
+
+for(i=0;i<7;i++)
+printf("%c,",letter1[i]);
+  cout<<"\n______________________";
+
+}
 //________________________________________________________________________________________________________________
 //_______________________________________playgame_________________________________________________________________
 void game::playgame(char orig[15][15],char test[300][15],int allScore)
