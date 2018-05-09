@@ -309,6 +309,33 @@ for(i=0;i<7;i++)
 printf("%c,",letter1[i]);
   cout<<"\n______________________";
 
+  inp=input(orig);                                   //   input function call for alphabet
+
+    cout<<"letter chosen is "<<inp;
+    cout<<"\n____________________";
+    coor(inp,orig);                                           // coordinate input
+    boardnum(orig);
+    reduceAlpha(inp,orig);
+    reduceUser(inp,orig);
+    label1:
+   printf("\nDo u want to use more\nletters ???\n______________________\nPRESS :\n'y' for YES\n'n' to form a WORD\n'm' to quit your turn\n'e' for Exit\n");
+    cont=getche();
+if((cont=='n')||(cont=='N'))
+    {word(orig,test,allScore);}                           
+
+else if((cont=='e')||(cont=='E'))
+    {exit(0);}
+else if((cont!='e')&&(cont!='E')&&(cont!='m')&&(cont!='M')&&(cont!='n')&&(cont!='N')&&(cont!='y')&&(cont!='Y'))
+   {  clrscr();  cleardevice();  boardnum(orig);
+    cout<<"\n"<<play1<<"'s "<<"turn";
+   setcolor(GREEN);
+    line(0,30,200,30);
+    line(0,32,200,32);
+    cout<<"\n\nYou pressed '"<<cont<<"'";
+    cout<<"\nWrong option opted !!\n______________________"; goto label1;
+   }
+
+
 }
 //________________________________________________________________________________________________________________
 //_______________________________________playgame_________________________________________________________________
