@@ -480,3 +480,33 @@ cout<<"\n______________________";
 
     getch();
 }
+//________________________________________________
+//_______________WORD FINDING__________________________
+void game::word(char orig[15][15],char test[300][15],int allScore)
+{   int c,d,e,f,getpoint,cmp,flagLocal=0;        int itr1=0,itr2=0;  char wordFile[40];
+    int point1=0;                                int itr3=0,itr4=0,itrTest=0;
+    char wordForm[15];
+    int flagTest=0;
+
+    clrscr(); cleardevice();
+     boardnum(orig);
+                                cout<<"\n"<<play1<<"'s "<<"turn";
+                                    setcolor(GREEN);
+                                    line(0,30,200,30);
+                                    line(0,32,200,32);
+    testphase:
+    
+     cout<<"\n\nEnter start coordinates\nof your word formed";
+     cin>>c>>d;
+     cout<<"\nEnter end coordinates\nof your word formed";
+     cin>>e>>f;
+                     if((c>15)||(d>15)||(c<1)||(d<1)||(e>15)||(f>15)||(e<1)||(f<1))       //constaints for coordinates to be inbetween 1and 15
+                            {  clrscr();  cleardevice();  boardnum(orig);
+                                cout<<"\n"<<play1<<"'s "<<"turn";
+                                    setcolor(GREEN);
+                                    line(0,30,200,30);
+                                    line(0,32,200,32);
+                                cout<<"\n\n Wrong coordinates\nInput again\n_____________________";
+
+                                goto testphase;
+                            }
