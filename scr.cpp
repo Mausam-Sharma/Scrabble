@@ -863,3 +863,12 @@ if(allScore==3){scoreUser4=score1;}
 
 
      }                                   //if(c==e) ends here
+
+     //___________if(d==f)_______________________starts here
+if(d==f)
+     {
+
+            if(c<e)
+                {for(itr1=c,itr2=0;itr1<=e;itr1++,itr2++)
+                    {  wordForm[itr2]=orig[itr1][d];  wordForm[itr2+1]='\0';}
+                }
