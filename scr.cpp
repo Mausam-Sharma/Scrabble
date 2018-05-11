@@ -847,3 +847,19 @@ if((c==1)&&((itr1==4)||(itr1==12)))
 //----------------------------------
      score1=score1+point1;
      }
+     fout.close();
+}
+getch();
+clrscr(); cleardevice();
+if(allScore==0){scoreUser1=score1;}
+if(allScore==1){scoreUser2=score1;}
+if(allScore==2){scoreUser3=score1;}
+if(allScore==3){scoreUser4=score1;}
+    cout<<"\n\n\n\t\t\t\t"<<play1<<"'s "<<"score board :\n\t\t\t\t____________________";      //scoreboard
+     cout<<"\n\nWord formed is : "<<wordForm;
+     printf("\n\n\n\ncurrent word score is %d ",point1);
+     printf("\n\n\n\n total score is %d ",score1);
+
+
+
+     }                                   //if(c==e) ends here
