@@ -880,3 +880,13 @@ if(d==f)
 
           strlwr(wordForm);
           cout<<"\n____________________\n"<<wordForm<<"\n____________________";
+          
+for(itrTest=0;itrTest<=testNumber;itrTest++)
+{
+    if(strcmp(wordForm,test[itrTest])==0)
+    {
+        cout<<"\nWord already formed!!!\n0 points for this word";  point1=0;
+        score1=score1+point1;
+         flagTest=1; break;
+    }
+}
