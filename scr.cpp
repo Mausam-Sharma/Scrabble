@@ -1016,3 +1016,23 @@ else if(flagLocal==1)
      getpoint=getpoint*3;
      if((itr1==10)&&((d==2)||(d==14)))
      getpoint=getpoint*3;
+
+
+       if((itr1==2)&&((d==2)||(d==14)))
+        doubleWord=doubleWord+1;
+       if((itr1==3)&&((d==3)||(d==13)))
+        doubleWord=doubleWord+1;
+       if((itr1==4)&&((d==4)||(d==12)))
+        doubleWord=doubleWord+1;
+       if((itr1==5)&&((d==5)||(d==11)))
+         doubleWord=doubleWord+1;
+       if((itr1==8)&&(d==8))
+         doubleWord=doubleWord+1;
+       if((itr1==11)&&((d==5)||(d==11)))
+          doubleWord=doubleWord+1;
+       if((itr1==12)&&((d==4)||(d==12)))
+          doubleWord=doubleWord+1;
+       if((itr1==13)&&((d==3)||(d==13)))
+           doubleWord=doubleWord+1;
+       if((itr1==14)&&((d==2)||(d==14)))
+           doubleWord=doubleWord+1;
