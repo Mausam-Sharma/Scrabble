@@ -827,3 +827,23 @@ if((c==1)&&((itr1==4)||(itr1==12)))
   point1=point1+getpoint;
             }
             }   // ( f<d ) ends here
+
+            if(doubleWord>0)
+      {
+          for(itr3=doubleWord;itr3>0;itr3--)
+          {
+              point1=point1*2;
+          }
+      }
+
+       if(tripleWord>0)
+      {
+          for(itr4=tripleWord;itr4>0;itr4--)
+          {
+              point1=point1*3;
+          }
+      }
+
+//----------------------------------
+     score1=score1+point1;
+     }
