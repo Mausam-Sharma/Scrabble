@@ -510,3 +510,11 @@ void game::word(char orig[15][15],char test[300][15],int allScore)
 
                                 goto testphase;
                             }
+      if(c==e)
+     {
+
+          if(d<f)
+           {
+            for(itr1=d,itr2=0;itr1<=f;itr1++,itr2++)
+                    {   wordForm[itr2]=orig[c][itr1]; wordForm[itr2+1]='\0';}
+           }
