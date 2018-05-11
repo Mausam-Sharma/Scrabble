@@ -880,7 +880,7 @@ if(d==f)
 
           strlwr(wordForm);
           cout<<"\n____________________\n"<<wordForm<<"\n____________________";
-          
+
 for(itrTest=0;itrTest<=testNumber;itrTest++)
 {
     if(strcmp(wordForm,test[itrTest])==0)
@@ -890,3 +890,18 @@ for(itrTest=0;itrTest<=testNumber;itrTest++)
          flagTest=1; break;
     }
 }
+if(flagTest==0)
+{   ifstream fout;
+fout.open("loop.txt",ios::in||ios::out||ios::noreplace);
+while(!fout.eof())
+    {
+        fout.getline(wordFile,40);
+        cmp=strcmp(wordFile,wordForm);
+        if(cmp==0)
+        { cout<<"\nword found\n\""; cout<<wordFile<<"\" is at position "<<fout.tellg(); flagLocal=1;
+          ++testNumber;
+          strcpy(test[testNumber],wordForm);
+        break;
+         }
+
+    }
