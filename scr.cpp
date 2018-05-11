@@ -644,3 +644,16 @@ else if(flagLocal==1)
      getpoint=getpoint*2;
        if((c==9)&&((itr1==9)||(itr1==13)))
      getpoint=getpoint*2;
+
+   if((c==2)&&((itr1==6)||(itr1==10)))
+     getpoint=getpoint*3;
+     if((c==14)&&((itr1==6)||(itr1==10)))
+     getpoint=getpoint*3;
+     if((c==6)&&((itr1==6)||(itr1==10)))
+     getpoint=getpoint*3;
+     if((c==10)&&((itr1==6)||(itr1==10)))
+     getpoint=getpoint*3;
+     if((c==6)&&((itr1==2)||(itr1==14)))
+     getpoint=getpoint*3;
+     if((c==10)&&((itr1==2)||(itr1==14)))
+     getpoint=getpoint*3;
