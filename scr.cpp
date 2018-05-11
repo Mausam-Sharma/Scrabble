@@ -1002,3 +1002,17 @@ else if(flagLocal==1)
      getpoint=getpoint*2;
        if((itr1==9)&&((d==9)||(d==13)))
      getpoint=getpoint*2;
+
+
+       if((itr1==2)&&((d==6)||(d==10)))
+     getpoint=getpoint*3;
+     if((itr1==14)&&((d==6)||(d==10)))
+     getpoint=getpoint*3;
+     if((itr1==6)&&((d==6)||(d==10)))
+     getpoint=getpoint*3;
+     if((itr1==10)&&((d==6)||(d==10)))
+     getpoint=getpoint*3;
+     if((itr1==6)&&((d==2)||(d==14)))
+     getpoint=getpoint*3;
+     if((itr1==10)&&((d==2)||(d==14)))
+     getpoint=getpoint*3;
