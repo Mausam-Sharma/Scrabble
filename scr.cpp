@@ -534,3 +534,17 @@ void game::word(char orig[15][15],char test[300][15],int allScore)
          flagTest=1; break;
     }
 }
+if(flagTest==0)
+{ ifstream fout;
+fout.open("loop.txt",ios::in||ios::out||ios::noreplace);
+while(!fout.eof())
+    {
+        fout.getline(wordFile,40);
+        cmp=strcmp(wordFile,wordForm);                        //checking if word exists with dictionary
+        if(cmp==0)
+        { cout<<"\nword found\n\""; cout<<wordFile<<"\" is at position "<<fout.tellg(); flagLocal=1;
+          ++testNumber;
+          strcpy(test[testNumber],wordForm);
+        break;
+        }
+    }
