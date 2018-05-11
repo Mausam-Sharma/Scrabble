@@ -976,3 +976,29 @@ else if(flagLocal==1)
                         case '_':  getpoint=0;  break;
                         default:  cout<<"\nNon-allowed character\nencountered";
                     }
+
+       if((itr1==1)&&((d==4)||(d==12)))
+     getpoint=getpoint*2;
+       if((itr1==8)&&((d==4)||(d==12)))
+     getpoint=getpoint*2;
+       if((itr1==15)&&((d==4)||(d==12)))
+     getpoint=getpoint*2;
+
+       if((itr1==3)&&((d==7)||(d==9)))
+     getpoint=getpoint*2;
+       if((itr1==13)&&((d==7)||(d==9)))
+     getpoint=getpoint*2;
+
+       if((itr1==4)&&((d==1)||(d==8)||(d==15)))
+     getpoint=getpoint*2;
+       if((itr1==12)&&((d==1)||(d==8)||(d==15)))
+     getpoint=getpoint*2;
+
+       if((itr1==7)&&((d==3)||(d==7)))
+     getpoint=getpoint*2;
+       if((itr1==7)&&((d==9)||(d==13)))
+     getpoint=getpoint*2;
+       if((itr1==9)&&((d==3)||(d==7)))
+     getpoint=getpoint*2;
+       if((itr1==9)&&((d==9)||(d==13)))
+     getpoint=getpoint*2;
