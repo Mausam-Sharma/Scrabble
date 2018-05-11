@@ -1036,3 +1036,19 @@ else if(flagLocal==1)
            doubleWord=doubleWord+1;
        if((itr1==14)&&((d==2)||(d==14)))
            doubleWord=doubleWord+1;
+
+
+  if((itr1==1)&&((d==1)||(d==8)||(d==15)))
+    tripleWord=tripleWord+1;
+  if((itr1==8)&&((d==1)||(d==15)))
+      tripleWord=tripleWord+1;
+  if((itr1==15)&&((d==1)||(d==8)||(d==15)))
+       tripleWord=tripleWord+1;
+
+
+
+
+//-------------------------------
+  point1=point1+getpoint;
+            }
+    }          //  (c<e  ends here)
