@@ -813,3 +813,16 @@ if((c==1)&&((itr1==4)||(itr1==12)))
            doubleWord=doubleWord+1;
        if((c==14)&&((itr1==2)||(itr1==14)))
            doubleWord=doubleWord+1;
+
+         if((c==1)&&((itr1==1)||(itr1==8)||(itr1==15)))
+    tripleWord=tripleWord+1;
+  if((c==8)&&((itr1==1)||(itr1==15)))
+      tripleWord=tripleWord+1;
+  if((c==15)&&((itr1==1)||(itr1==8)||(itr1==15)))
+       tripleWord=tripleWord+1;
+
+
+
+//-------------------------------
+  point1=point1+getpoint;
+            }
