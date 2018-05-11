@@ -872,3 +872,11 @@ if(d==f)
                 {for(itr1=c,itr2=0;itr1<=e;itr1++,itr2++)
                     {  wordForm[itr2]=orig[itr1][d];  wordForm[itr2+1]='\0';}
                 }
+                else if(e<c)
+           {
+            for(itr1=c,itr2=0;itr1>=e;itr1--,itr2++)
+                    {   wordForm[itr2]=orig[itr1][d]; wordForm[itr2+1]='\0';}
+           }
+
+          strlwr(wordForm);
+          cout<<"\n____________________\n"<<wordForm<<"\n____________________";
