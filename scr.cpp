@@ -905,3 +905,74 @@ while(!fout.eof())
          }
 
     }
+
+    if(flagLocal==0)
+{cout<<"\nWord not found in dictionary!!!!!\n 0 points for this word";}
+else if(flagLocal==1)
+    {    int doubleWord=0,tripleWord=0;     itr3=0; itr4=0;
+       if(c<e)
+        {for(itr1=c;itr1<=e;itr1++)
+            { getpoint=0;
+              switch(orig[itr1][d])
+                    {   case 'A':
+                        case 'a':
+                        case 'E':
+                        case 'e':
+                        case 'I':
+                        case 'i':
+                        case 'L':
+                        case 'l':
+                        case 'N':
+                        case 'n':
+                        case 'O':
+                        case 'o':
+                        case 'R':
+                        case 'r':
+                        case 'S':
+                        case 's':
+                        case 'T':
+                        case 't':
+                        case 'U':
+                        case 'u':   getpoint=1; break;
+
+                        case 'D':
+                        case 'd':
+                        case 'G':
+                        case 'g':   getpoint=2; break;
+
+                        case 'B':
+                        case 'b':
+                        case 'C':
+                        case 'c':
+                        case 'M':
+                        case 'm':
+                        case 'P':
+                        case 'p':   getpoint=3; break;
+
+                        case 'F':
+                        case 'f':
+                        case 'H':
+                        case 'h':
+                        case 'V':
+                        case 'v':
+                        case 'W':
+                        case 'w':
+                        case 'Y':
+                        case 'y':   getpoint=4; break;
+
+                        case 'K':
+                        case 'k':   getpoint=5; break;
+
+                        case 'J':
+                        case 'j':
+                        case 'X':
+                        case 'x':   getpoint=8; break;
+
+                        case 'Q':
+                        case 'q':
+                        case 'Z':
+                        case 'z':  getpoint=10; break;
+
+                        case '_':  getpoint=0;  break;
+                        default:  cout<<"\nNon-allowed character\nencountered";
+                    }
