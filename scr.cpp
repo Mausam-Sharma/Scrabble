@@ -1188,3 +1188,49 @@ if((itr1==1)&&((d==1)||(d==8)||(d==15)))
   if((itr1==15)&&((d==1)||(d==8)||(d==15)))
        tripleWord=tripleWord+1;
 
+
+
+//-------------------------------
+  point1=point1+getpoint;
+            }
+    }  // (e<c)  ends here
+         if(doubleWord>0)
+      {
+          for(itr3=doubleWord;itr3>0;itr3--)
+          {
+              point1=point1*2;
+          }
+      }
+
+       if(tripleWord>0)
+      {
+          for(itr4=tripleWord;itr4>0;itr4--)
+          {
+              point1=point1*3;
+          }
+      }
+
+//----------------------------------
+     score1=score1+point1;
+     }
+
+
+fout.close();
+}
+getch();
+clrscr(); cleardevice();
+if(allScore==0){scoreUser1=score1;}
+if(allScore==1){scoreUser2=score1;}
+if(allScore==2){scoreUser3=score1;}
+if(allScore==3){scoreUser4=score1;}
+
+     cout<<"\n\n\n\t\t\t\t"<<play1<<"'s "<<"score board :\n\t\t\t\t____________________";
+     cout<<"\n\nWord formed is : "<<wordForm;
+     printf("\n\n\n\ncurrent word score is %d ",point1);
+     printf("\n\n\n\n total score is %d ",score1);
+
+
+
+     }
+
+}
