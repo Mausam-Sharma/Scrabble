@@ -1250,3 +1250,17 @@ void game::reduceUser(char inp,char orig[15][15])
   }
 }
 }
+//________________________________________________
+//________________reducing the character set__________________________
+void game::reduceAlpha(char inp,char orig[15][15])
+{  int itr,pos;
+for(itr=0;itr<chance;itr++)
+{ if(alpha[itr]==inp)
+  { pos=itr;
+    for(itr=pos;itr<chance-1;itr++)            // to reduce alphabets
+  alpha[itr]=alpha[itr+1];
+  chance--;
+    break;
+  }
+}
+}
