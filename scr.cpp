@@ -1234,3 +1234,19 @@ if(allScore==3){scoreUser4=score1;}
      }
 
 }
+//________________________________________________
+//________________reducing the character set__________________________
+void game::reduceUser(char inp,char orig[15][15])
+{  int itr,pos;
+
+    for(itr=0;itr<leng1;itr++)
+{ if(letter1[itr]==inp)
+  { pos=itr;
+
+   for(itr=pos;itr<leng1-1;itr++)              // to reduce user set
+      letter1[itr]=letter1[itr+1];
+      leng1--;
+    break;
+  }
+}
+}
