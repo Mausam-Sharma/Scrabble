@@ -1264,3 +1264,22 @@ for(itr=0;itr<chance;itr++)
   }
 }
 }
+//________________________________________________
+//__________coordinates input_____________________
+void game::coor(char inp,char orig[15][15])
+{
+
+                            C:
+                            cout<<"\nEnter position in x & y\ncoordinates  (e.g 2 3)\n ";
+                            cin>>a>>b;
+                            if((a>15)||(b>15)||(a<1)||(b<1))
+                            {  clrscr();  cleardevice();  boardnum(orig);
+                                cout<<"\n"<<play1<<"'s "<<"turn";
+                                    setcolor(GREEN);
+                                    line(0,30,200,30);
+                                    line(0,32,200,32);
+                                cout<<"\n\n Wrong coordinates\n";
+
+                  
+                            orig[a][b]=inp; // input of coordinates
+}             // coordinate function
