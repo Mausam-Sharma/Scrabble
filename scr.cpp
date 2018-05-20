@@ -1316,3 +1316,37 @@ void game::coor(char inp,char orig[15][15])
                             }
                             orig[a][b]=inp; // input of coordinates
 }             // coordinate function
+
+
+//____________________________________________________
+//_____________alpha input function___________________
+char game::input(char orig[15][15])
+{  char inp;int i;
+    B:
+    cout<<"\nPut letter from your set:\n";
+inp=getche();
+
+    for(i=0;i<leng1;i++)
+{ if(letter1[i]==inp)
+    { flag=1;
+      break;
+      }
+   else
+     flag=0;
+}
+if(flag==0)
+{ clrscr();  cleardevice();  boardnum(orig);
+  cout<<"\n"<<play1<<"'s "<<"turn";
+   setcolor(GREEN);
+    line(0,30,200,30);
+    line(0,32,200,32);
+  cout<<"\n\nYou pressed '"<<inp<<"'";
+  cout<<"\nwrong letter\nThat's not in your set";cout<<"\n______________________\n";
+  for(i=0;i<leng1;i++)
+{ printf("%c,",letter1[i]);        // reduced character set
+}
+
+  goto B;
+  }
+return inp;
+}
