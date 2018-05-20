@@ -1280,6 +1280,39 @@ void game::coor(char inp,char orig[15][15])
                                     line(0,32,200,32);
                                 cout<<"\n\n Wrong coordinates\n";
 
-                  
+                                goto C;
+                            }
+                    else if(isalpha(a))
+                    {
+                         clrscr();  cleardevice();  boardnum(orig);
+                                cout<<"\n"<<play1<<"'s "<<"turn";
+                                    setcolor(GREEN);
+                                    line(0,30,200,30);
+                                    line(0,32,200,32);
+                                cout<<"\n\nyou pressed '"<<a<<"' & '"<<b<<"'";
+                                cout<<"\nWRONG COORDINATES\n";
+                                goto C;
+                    }
+                     else if(ispunct(a))
+                    {
+                         clrscr();  cleardevice();  boardnum(orig);
+                                cout<<"\n"<<play1<<"'s "<<"turn";
+                                    setcolor(GREEN);
+                                    line(0,30,200,30);
+                                    line(0,32,200,32);
+                                cout<<"\n\nyou pressed '"<<a<<"' & '"<<b<<"'";
+                                cout<<"\nWRONG COORDINATES\n";
+                                goto C;
+                    }
+                            else if(isalpha(orig[a][b]))
+                            {   clrscr();  cleardevice();  boardnum(orig);
+                                cout<<"\n"<<play1<<"'s "<<"turn";
+                                    setcolor(GREEN);
+                                    line(0,30,200,30);
+                                    line(0,32,200,32);
+                                cout<<"\n\n Position already filled\n";
+                                cout<<"\nWRONG COORDINATES\n";
+                                goto C;
+                            }
                             orig[a][b]=inp; // input of coordinates
 }             // coordinate function
