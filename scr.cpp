@@ -1350,3 +1350,17 @@ if(flag==0)
   }
 return inp;
 }
+
+//____________________________________________________
+//_____________random alphabet generating function_____
+void game::call_random(char orig[15][15])
+{  int itr;
+    randomize();
+for(itr=0;itr<7;itr++)
+{
+j[itr]=random(chance);
+cout<<alpha[j[itr]]<<",";
+letter1[itr]=alpha[j[itr]];
+leng1++;
+  }
+}
