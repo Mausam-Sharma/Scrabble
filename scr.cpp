@@ -1364,3 +1364,12 @@ letter1[itr]=alpha[j[itr]];
 leng1++;
   }
 }
+
+//___________________________________________________
+//___________initialising board graphics_______________________________
+    void game::initial(char orig[15][15])
+    { int itr1,itr2;
+       for(itr1=0;itr1<16;itr1++)
+       for(itr2=0;itr2<16;itr2++)
+      orig[itr1][itr2]=' ';
+    }
