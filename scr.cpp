@@ -1378,5 +1378,9 @@ leng1++;
 void game::boardnum(char orig[15][15])
 { int itr1,itr2;
 
-  
+  setcolor(RED);
+   for(itr1=1;itr1<=16;itr1++)
+      { line(210,10+(itr1*25)-12,610-13,10+(itr1*25)-12);
+         line(210+(itr1*25)-13,10,210+(itr1*25)-13,410-12);
+      }
 }
