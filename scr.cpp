@@ -1373,3 +1373,10 @@ leng1++;
        for(itr2=0;itr2<16;itr2++)
       orig[itr1][itr2]=' ';
     }
+//______________________________________________
+//_____________________board__drawing__function________________________
+void game::boardnum(char orig[15][15])
+{ int itr1,itr2;
+
+  
+}
