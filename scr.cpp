@@ -1383,4 +1383,18 @@ void game::boardnum(char orig[15][15])
       { line(210,10+(itr1*25)-12,610-13,10+(itr1*25)-12);
          line(210+(itr1*25)-13,10,210+(itr1*25)-13,410-12);
       }
+  setcolor(BLUE);
+
+    outtextxy(390+200-13,7,"15");  outtextxy(40+200-13,7,"1"); outtextxy(65+200-13,7,"2");
+    outtextxy(90+200-13,7,"3");  outtextxy(115+200-13,7,"4"); outtextxy(140+200-13,7,"5");
+    outtextxy(165+200-13,7,"6");  outtextxy(190+200-13,7,"7"); outtextxy(215+200-13,7,"8");
+    outtextxy(240+200-13,7,"9");  outtextxy(265+200-13,7,"10"); outtextxy(290+200-13,7,"11");
+    outtextxy(315+200-13,7,"12");  outtextxy(340+200-13,7,"13"); outtextxy(365+200-13,7,"14");
+
+    outtextxy(5+200,390,"15");  outtextxy(5+200,40,"1"); outtextxy(5+200,65,"2");
+    outtextxy(5+200,90,"3");  outtextxy(5+200,115,"4"); outtextxy(5+200,140,"5");
+    outtextxy(5+200,165,"6");  outtextxy(5+200,190,"7"); outtextxy(5+200,215,"8");
+    outtextxy(5+200,240,"9");  outtextxy(5+200,265,"10"); outtextxy(5+200,290,"11");
+    outtextxy(5+200,315,"12");  outtextxy(5+200,340,"13"); outtextxy(5+200,365,"14");
+
 }
