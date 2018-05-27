@@ -1398,3 +1398,12 @@ void game::boardnum(char orig[15][15])
     outtextxy(5+200,315,"12");  outtextxy(5+200,340,"13"); outtextxy(5+200,365,"14");
 
 }
+setcolor(LIGHTGREEN);   setfillstyle(SOLID_FILL,LIGHTGREEN);
+{  for(itr1=1;itr1<=15;itr1++)
+     {  for(itr2=1;itr2<=15;itr2++)
+    {  floodfill(220+(itr1*25)-13,20+(itr2*25)-12,RED);
+    }
+     }
+
+
+}
