@@ -1397,7 +1397,7 @@ void game::boardnum(char orig[15][15])
     outtextxy(5+200,240,"9");  outtextxy(5+200,265,"10"); outtextxy(5+200,290,"11");
     outtextxy(5+200,315,"12");  outtextxy(5+200,340,"13"); outtextxy(5+200,365,"14");
 
-}
+
 setcolor(LIGHTGREEN);   setfillstyle(SOLID_FILL,LIGHTGREEN);
 {  for(itr1=1;itr1<=15;itr1++)
      {  for(itr2=1;itr2<=15;itr2++)
@@ -1406,4 +1406,19 @@ setcolor(LIGHTGREEN);   setfillstyle(SOLID_FILL,LIGHTGREEN);
      }
 
 
+}
+
+setcolor(LIGHTMAGENTA);   setfillstyle(SOLID_FILL,LIGHTMAGENTA);
+ {
+   floodfill(220+(50)-13,20+(50)-12,RED);   floodfill(220+(350)-13,20+(50)-12,RED);
+   floodfill(220+(75)-13,20+(75)-12,RED);   floodfill(220+(325)-13,20+(75)-12,RED);
+  floodfill(220+(100)-13,20+(100)-12,RED);  floodfill(220+(300)-13,20+(100)-12,RED);
+  floodfill(220+(125)-13,20+(125)-12,RED);  floodfill(220+(275)-13,20+(125)-12,RED);
+
+  floodfill(220+(50)-13,20+(350)-12,RED);    floodfill(220+(350)-13,20+(350)-12,RED);
+  floodfill(220+(75)-13,20+(325)-12,RED);    floodfill(220+(325)-13,20+(325)-12,RED);
+  floodfill(220+(100)-13,20+(300)-12,RED);    floodfill(220+(300)-13,20+(300)-12,RED);
+  floodfill(220+(125)-13,20+(275)-12,RED);    floodfill(220+(275)-13,20+(275)-12,RED);
+  floodfill(220+(200)-13,20+(200)-12,RED);
+  }
 }
