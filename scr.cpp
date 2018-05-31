@@ -1421,4 +1421,37 @@ setcolor(LIGHTMAGENTA);   setfillstyle(SOLID_FILL,LIGHTMAGENTA);
   floodfill(220+(125)-13,20+(275)-12,RED);    floodfill(220+(275)-13,20+(275)-12,RED);
   floodfill(220+(200)-13,20+(200)-12,RED);
   }
+
+
+setcolor(WHITE);  setfillstyle(SOLID_FILL,WHITE);
+{
+floodfill(220+(225)-13,20+(225)-12,RED);
+floodfill(220+(175)-13,20+(175)-12,RED);
+floodfill(220+(175)-13,20+(225)-12,RED);
+floodfill(220+(225)-13,20+(175)-12,RED);
+floodfill(220+(175)-13,20+(75)-12,RED);
+floodfill(220+(225)-13,20+(75)-12,RED);
+floodfill(220+(100)-13,20+(25)-12,RED);
+floodfill(220+(300)-13,20+(25)-12,RED);
+floodfill(220+(25)-13,20+(100)-12,RED);
+floodfill(220+(375)-13,20+(100)-12,RED);
+floodfill(220+(25)-13,20+(300)-12,RED);
+floodfill(220+(375)-13,20+(300)-12,RED);
+floodfill(220+(175)-13,20+(325)-12,RED);
+floodfill(220+(225)-13,20+(325)-12,RED);
+floodfill(220+(200)-13,20+(100)-12,RED);
+floodfill(220+(200)-13,20+(300)-12,RED);
+floodfill(220+(75)-13,20+(175)-12,RED);
+floodfill(220+(325)-13,20+(175)-12,RED);
+floodfill(220+(100)-13,20+(200)-12,RED);
+floodfill(220+(300)-13,20+(200)-12,RED);
+floodfill(220+(75)-13,20+(225)-12,RED);
+floodfill(220+(325)-13,20+(225)-12,RED);
+
+floodfill(220+(100)-13,20+(375)-12,RED);
+floodfill(220+(300)-13,20+(375)-12,RED);
+
+
+}
+
 }
