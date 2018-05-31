@@ -1461,4 +1461,15 @@ setcolor(LIGHTRED);  setfillstyle(SOLID_FILL,LIGHTRED);
   floodfill(220+(200)-13,20+(375)-12,RED);   floodfill(220+(375)-13,20+(200)-12,RED);
 }
 
+
+setcolor(LIGHTBLUE);  setfillstyle(SOLID_FILL,LIGHTBLUE);
+{
+floodfill(220+(150)-13,20+(50)-12,RED);   floodfill(220+(250)-13,20+(50)-12,RED);
+floodfill(220+(50)-13,20+(150)-12,RED);   floodfill(220+(150)-13,20+(150)-12,RED);
+floodfill(220+(250)-13,20+(150)-12,RED);   floodfill(220+(350)-13,20+(150)-12,RED);
+floodfill(220+(50)-13,20+(250)-12,RED);   floodfill(220+(150)-13,20+(250)-12,RED);
+floodfill(220+(250)-13,20+(250)-12,RED);   floodfill(220+(350)-13,20+(250)-12,RED);
+floodfill(220+(150)-13,20+(350)-12,RED);   floodfill(220+(250)-13,20+(350)-12,RED);
+
+ }
 }
