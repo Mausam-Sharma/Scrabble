@@ -1472,4 +1472,96 @@ floodfill(220+(250)-13,20+(250)-12,RED);   floodfill(220+(350)-13,20+(250)-12,RE
 floodfill(220+(150)-13,20+(350)-12,RED);   floodfill(220+(250)-13,20+(350)-12,RED);
 
  }
+
+
+setcolor(BLACK);
+
+for(itr1=0;itr1<16;itr1++)
+ for(itr2=0;itr2<16;itr2++)
+  { if(isalpha(orig[itr1][itr2]))
+    {    switch(orig[itr1][itr2])
+      { case 'A':
+        case 'a':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"A");
+       break;
+        case 'B':
+        case 'b':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"B");
+       break;
+        case 'C':
+        case 'c':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"C");
+       break;
+        case 'D':
+        case 'd':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"D");
+       break;
+        case 'E':
+        case 'e':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"E");
+       break;
+        case 'F':
+        case 'f':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"F");
+       break;
+        case 'G':
+        case 'g':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"G");
+       break;
+        case 'H':
+        case 'h':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"H");
+       break;
+        case 'I':
+        case 'i':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"I");
+       break;
+        case 'J':
+        case 'j':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"J");
+       break;
+        case 'K':
+        case 'k':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"K");
+       break;
+        case 'L':
+        case 'l':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"L");
+       break;
+        case 'M':
+        case 'm':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"M");
+       break;
+        case 'N':
+        case 'n':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"N");
+       break;
+        case 'O':
+        case 'o':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"O");
+       break;
+        case 'P':
+        case 'p':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"P");
+       break;
+        case 'Q':
+        case 'q':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"Q");
+       break;
+        case 'R':
+        case 'r':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"R");
+       break;
+        case 'S':
+        case 's':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"S");
+       break;
+        case 'T':
+        case 't':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"T");
+       break;
+        case 'U':
+        case 'u':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"U");
+       break;
+        case 'V':
+        case 'v':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"V");
+       break;
+        case 'W':
+        case 'w':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"W");
+       break;
+        case 'X':
+        case 'x':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"X");
+       break;
+        case 'Y':
+        case 'y':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"Y");
+       break;
+        case 'Z':
+        case 'z':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"Z");
+       break;
+       }
+    }
+  }
+
+
 }
+
