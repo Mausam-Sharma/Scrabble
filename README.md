@@ -4,3 +4,7 @@ Scrabble is a C++ based graphical game Scrabble is an interactive and easy to pl
 The source code is developed to run on " Turbo C++ compiler " specifically and supports C++98 standards while the graphics are made using inbuilt graphics library of Turbo C++. To make it run on modern day IDE's such as codeblocks, certain changes would be needed such as header files inclusion according to C++11 standard formats with outside graphic libraries.  
 
 To run the source code in " Turbo C++ "  place the source code file (scr.cpp) and dictionary file (loop.txt) in the " source " folder of your TurboC3 folder of Turbo C++ installation files. Then start the DosBox and open the source file location, compile and run.
+
+
+
+![alt text](https://github.com/Mausam-Sharma/Scrabble/blob/master/Scrabble.JPG)
