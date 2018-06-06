@@ -1,4 +1,3 @@
-//---------------------------------------------HEADER FILES NECESSARY-------------------------------------------------
 #include<stdio.h>
 #include<iostream.h>
 #include<fstream.h>
@@ -10,8 +9,7 @@
 #include<stdlib.h>
 #include<ctype.h>
 #include<time.h>
-//--------------------------------------------------------------------------------------------------------------------
-//_____________________________________________GAME__CLASS______MEMBERS_DEFINED_______________________________________
+//___________________________________________________
  class game{  public:
 
 char letter1[7],play1[20];                //letter1 is the buffer for user characters, play1 is used to store user name
@@ -23,14 +21,14 @@ static int chance;
 static int testNumber;
 
 static int scoreUser1,scoreUser2,scoreUser3,scoreUser4;               //scores of users
-game()			//___________________________________________________________________________constructor_______________
+game()
 {  leng1=0,score1=0;
 
 
 
 }
 
- //__________________________________________________Member__Functions___Defined_______________________________________
+
  void boardnum(char orig[15][15]);
  void initial(char orig[15][15]);
  void playgame(char orig[15][15],char test[300][15],int allScore);
@@ -42,9 +40,9 @@ game()			//_____________________________________________________________________
  void reduceUser(char,char orig[15][15]);
  void word(char orig[15][15],char test[300][15],int allScore);
 
-}obj[4];// 4 objects as 4 players are defined
-//_____________________________________________________________________________________________________________________
-//________________________________________________Initialisation_Of_Game_Class_Variables_______________________________
+
+}obj[4];
+//____________
 int game::chance=100;
 int game::testNumber=-1;
 char game::alpha[100]={
@@ -62,14 +60,10 @@ int game::scoreUser1=0;
 int game::scoreUser2=0;
 int game::scoreUser3=0;
 int game::scoreUser4=0;
-int userNumber=0; 
-//____________________________________________Global_Variable_and_Method_______________________________________________
-
-char names[4][20];		// new 2d variable array to store names of players
-void winner();			// function to calculate winner
-
-//_____________________________________________________________________________________________________________________
-//__________________________________________Main__Function_____________________________________________________________
+int userNumber=0; char names[4][20];
+void winner();
+//_______________________________________________
+ //___________________________________________________
 void main()
 {   int gd,gm; //  graphic variables 
     detectgraph(&gd,&gm);
@@ -102,22 +96,21 @@ void main()
         clrscr(); cleardevice();
         cout<<"\n\t\t\t\tRULES OF GAME";
         cout<<"\n\t\t\t\t_____________";
-		cout<<"\n\n1: This is 2-4 player word forming game.";
-		cout<<"\n\n2: Every player will be given 7 random alphabets from an alphabet set \n";
-    	cout<<"   and player will be allowed to make words from these 7 letters. He is \n";
-		cout<<"   allowed to use letters as much as possible from his/her set of 7 letters.\n";
-		cout<<"   And then player can make a word to fetch a score which is automatically \n ";      // rules of game
-    	cout<<"   calculated. If no word can be formed player can quit his/her turn and\n";
-    	cout<<"   pass turn to next player.";
-    	cout<<"\n\n3: If your word covers a white box, this will fetch double of the letter's score\n   covering white box ";
-    	cout<<"\n\n4: If your word covers a blue box, this will fetch triple of the letter's score\n   covering blue box ";
-		cout<<"\n\n5: If your word covers a pink box, this will double the score of your whole \n   word";
-		cout<<"\n\n6: If your word covers a red box, this will triple the score of your whole \n   word";
-    	cout<<"\n\n7: Letter   a,e,i,l,n,o,r,s,t,u  fetch '1' point";
-    	cout<<"\n   Letter  d,g  fetch 2 point , Letter  b,c,m,p  fetch 3 point";
-    	cout<<"\n   Letter  f,h,v,w,y  fetch 4 point , Letter k  fetch 5 point";
-    	cout<<"\n   Letter  j,x  fetch 8 point , Letter q,z  fetch 10 point ";
-    	
+  cout<<"\n\n1: This is 2-4 player word forming game.";
+  cout<<"\n\n2: Every player will be given 7 random alphabets from an alphabet set \n";
+    cout<<"   and player will be allowed to make words from these 7 letters. He is \n";
+  cout<<"   allowed to use letters as much as possible from his/her set of 7 letters.\n";
+  cout<<"   And then player can make a word to fetch a score which is automatically \n ";      // rules of game
+    cout<<"   calculated. If no word can be formed player can quit his/her turn and\n";
+    cout<<"   pass turn to next player.";
+    cout<<"\n\n3: If your word covers a white box, this will fetch double of the letter's score\n   covering white box ";
+    cout<<"\n\n4: If your word covers a blue box, this will fetch triple of the letter's score\n   covering blue box ";
+  cout<<"\n\n5: If your word covers a pink box, this will double the score of your whole \n   word";
+  cout<<"\n\n6: If your word covers a red box, this will triple the score of your whole \n   word";
+    cout<<"\n\n7: Letter   a,e,i,l,n,o,r,s,t,u  fetch '1' point";
+    cout<<"\n   Letter  d,g  fetch 2 point , Letter  b,c,m,p  fetch 3 point";
+    cout<<"\n   Letter  f,h,v,w,y  fetch 4 point , Letter k  fetch 5 point";
+    cout<<"\n   Letter  j,x  fetch 8 point , Letter q,z  fetch 10 point ";
         getch(); goto menu;
     }
     else if(choice==1)
@@ -208,82 +201,70 @@ else
 }
     getch();
 }
-//_____________________________________________________________________________________________________________________
-//__________________________________________winner_deciding_method_____________________________________________________
+//__________________________________________________
+//__________________________________________________
 void winner()
 {  clrscr();  cleardevice();
+    if(userNumber==2)
+    {cout<<"\n"<<obj[0].play1<<"'s final score is "<<game::scoreUser1;
+    cout<<"\n\n\n"<<obj[1].play1<<"'s final score is "<<game::scoreUser2;
+    if((game::scoreUser1)>(game::scoreUser2))
+     {
+        cout<<"\n"<<obj[0].play1<<" is winner of the game !!!!!! ";           //function decides who is the winner after all characters are finished
+     }
+     else                                                                     //for 2 users
+     {
+        cout<<"\n"<<obj[1].play1<<" is winner of the game !!!!!! ";
 
-    if(userNumber==2){	
-    		cout<<"\n"<<obj[0].play1<<"'s final score is "<<game::scoreUser1;
-    		cout<<"\n\n\n"<<obj[1].play1<<"'s final score is "<<game::scoreUser2;
-    		
-    		if((game::scoreUser1)>(game::scoreUser2))
-    			{
-        			cout<<"\n"<<obj[0].play1<<" is winner of the game !!!!!! ";           //function decides who is the winner after all characters are finished
-     			}
-
-    		else                                                                     //for 2 users
-     			{
-        			cout<<"\n"<<obj[1].play1<<" is winner of the game !!!!!! ";
-
-     			}
-    		
-    		getch();
-			exit(0);
+     }
+    getch();
+exit(0);
     }
-
     if(userNumber==3){
-    	cout<<"\n"<<obj[0].play1<<"'s final score is "<<game::scoreUser1;
-    	cout<<"\n\n\n"<<obj[1].play1<<"'s final score is "<<game::scoreUser2;
-    	cout<<"\n\n\n"<<obj[2].play1<<"'s final score is "<<game::scoreUser3;
-    	if(((game::scoreUser1)>(game::scoreUser2))&&((game::scoreUser1)>(game::scoreUser3)))
-     		{
-        		cout<<"\n"<<obj[0].play1<<" is winner of the game !!!!!! ";                    //function decides who is the winner after all characters are finished
-     		}
-  		else if(((game::scoreUser2)>(game::scoreUser1))&&((game::scoreUser2)>(game::scoreUser3)))
-     		{
-        		cout<<"\n"<<obj[1].play1<<" is winner of the game !!!!!! ";                   //for 3 users
+    cout<<"\n"<<obj[0].play1<<"'s final score is "<<game::scoreUser1;
+    cout<<"\n\n\n"<<obj[1].play1<<"'s final score is "<<game::scoreUser2;
+    cout<<"\n\n\n"<<obj[2].play1<<"'s final score is "<<game::scoreUser3;
+    if(((game::scoreUser1)>(game::scoreUser2))&&((game::scoreUser1)>(game::scoreUser3)))
+     {
+        cout<<"\n"<<obj[0].play1<<" is winner of the game !!!!!! ";                    //function decides who is the winner after all characters are finished
+     }
+  else if(((game::scoreUser2)>(game::scoreUser1))&&((game::scoreUser2)>(game::scoreUser3)))
+     {
+        cout<<"\n"<<obj[1].play1<<" is winner of the game !!!!!! ";                   //for 3 users
 
-     		}
-    	else
-     		{
-        		cout<<"\n"<<obj[2].play1<<" is winner of the game !!!!!! ";
+     }
+    else
+     {
+        cout<<"\n"<<obj[2].play1<<" is winner of the game !!!!!! ";
 
-     		}
-    	
-    	getch();
-		exit(0);
-	}
-
+     }
+    getch();
+exit(0);}
     if(userNumber==4){
-    	cout<<"\n"<<obj[0].play1<<"'s final score is "<<game::scoreUser1;
-    	cout<<"\n\n\n"<<obj[1].play1<<"'s final score is "<<game::scoreUser2;         //function decides who is the winner after all characters are finished
-    	cout<<"\n\n\n"<<obj[2].play1<<"'s final score is "<<game::scoreUser3;
-    	cout<<"\n\n\n"<<obj[3].play1<<"'s final score is "<<game::scoreUser4;
+    cout<<"\n"<<obj[0].play1<<"'s final score is "<<game::scoreUser1;
+    cout<<"\n\n\n"<<obj[1].play1<<"'s final score is "<<game::scoreUser2;         //function decides who is the winner after all characters are finished
+    cout<<"\n\n\n"<<obj[2].play1<<"'s final score is "<<game::scoreUser3;
+    cout<<"\n\n\n"<<obj[3].play1<<"'s final score is "<<game::scoreUser4;
+    if(((game::scoreUser1)>(game::scoreUser2))&&((game::scoreUser1)>(game::scoreUser3))&&((game::scoreUser1)>(game::scoreUser4)))
+     {
+        cout<<"\n"<<obj[0].play1<<" is winner of the game !!!!!! ";
+     }
+    else if(((game::scoreUser2)>(game::scoreUser1))&&((game::scoreUser2)>(game::scoreUser3))&&((game::scoreUser2)>(game::scoreUser4)))
+     {
+        cout<<"\n"<<obj[1].play1<<" is winner of the game !!!!!! ";
+     }
+    else if(((game::scoreUser3)>(game::scoreUser1))&&((game::scoreUser3)>(game::scoreUser2))&&((game::scoreUser3)>(game::scoreUser4)))
+     {
+        cout<<"\n"<<obj[2].play1<<" is winner of the game !!!!!! ";                         //for 4 users
+     }
+    else
+    { cout<<"\n"<<obj[3].play1<<" is winner of the game !!!!!! ";}
+    getch();
+exit(0);}
 
-    	if(((game::scoreUser1)>(game::scoreUser2))&&((game::scoreUser1)>(game::scoreUser3))&&((game::scoreUser1)>(game::scoreUser4)))
-     		{
-        		cout<<"\n"<<obj[0].play1<<" is winner of the game !!!!!! ";
-     		}
-    	else if(((game::scoreUser2)>(game::scoreUser1))&&((game::scoreUser2)>(game::scoreUser3))&&((game::scoreUser2)>(game::scoreUser4)))
-     		{
-        		cout<<"\n"<<obj[1].play1<<" is winner of the game !!!!!! ";
-     		}
-    	else if(((game::scoreUser3)>(game::scoreUser1))&&((game::scoreUser3)>(game::scoreUser2))&&((game::scoreUser3)>(game::scoreUser4)))
-     		{
-        		cout<<"\n"<<obj[2].play1<<" is winner of the game !!!!!! ";                         //for 4 users
-     		}
-    	else
-    		{ cout<<"\n"<<obj[3].play1<<" is winner of the game !!!!!! ";
-    		}
-    	
-    	getch();
-		exit(0);
-	}
 }
-
-//________________________________________________________________________________________________________________
-//______________________________________playgame again____________________________________________________________
+//___________________playgameagain___________________
+//___________________________________________________
 void game::playgameagain(char orig[15][15],char test[300][15],int allScore)
 {   char inp,cont;        int i;
     fflush(stdin);
@@ -384,9 +365,8 @@ cout<<"\n______________________";
     getch();
 }
 
-
-//________________________________________________________________________________________________________________
-//_______________________________________playgame_________________________________________________________________
+//___________________________________________________
+//___________________________________________________
 void game::playgame(char orig[15][15],char test[300][15],int allScore)
 {   char inp,cont;        int i;
     fflush(stdin);
@@ -480,6 +460,7 @@ cout<<"\n______________________";
 
     getch();
 }
+
 //________________________________________________
 //_______________WORD FINDING__________________________
 void game::word(char orig[15][15],char test[300][15],int allScore)
@@ -510,7 +491,7 @@ void game::word(char orig[15][15],char test[300][15],int allScore)
 
                                 goto testphase;
                             }
-      if(c==e)
+     if(c==e)
      {
 
           if(d<f)
@@ -525,7 +506,7 @@ void game::word(char orig[15][15],char test[300][15],int allScore)
            }
           strlwr(wordForm);
           cout<<"\n____________________\n"<<wordForm<<"\n____________________";
-          for(itrTest=0;itrTest<=testNumber;itrTest++)
+for(itrTest=0;itrTest<=testNumber;itrTest++)
 {
     if(strcmp(wordForm,test[itrTest])==0)
     {
@@ -548,8 +529,7 @@ while(!fout.eof())
         break;
         }
     }
-
-    if(flagLocal==0)
+if(flagLocal==0)
 {cout<<"\nWord not found in dictionary!!!!!\n0 points for this word"; point1=0;}              //points calculation according to coordinates
 else if(flagLocal==1)
     {    int doubleWord=0,tripleWord=0; itr3=0; itr4=0;
@@ -619,7 +599,9 @@ else if(flagLocal==1)
                         case '_':  getpoint=0;  break;
                         default:  cout<<"\nNon-allowed character\nencountered";
                     }
-                    if((c==1)&&((itr1==4)||(itr1==12)))
+
+
+       if((c==1)&&((itr1==4)||(itr1==12)))
      getpoint=getpoint*2;
        if((c==8)&&((itr1==4)||(itr1==12)))
      getpoint=getpoint*2;
@@ -645,7 +627,8 @@ else if(flagLocal==1)
        if((c==9)&&((itr1==9)||(itr1==13)))
      getpoint=getpoint*2;
 
-   if((c==2)&&((itr1==6)||(itr1==10)))
+
+     if((c==2)&&((itr1==6)||(itr1==10)))
      getpoint=getpoint*3;
      if((c==14)&&((itr1==6)||(itr1==10)))
      getpoint=getpoint*3;
@@ -658,7 +641,9 @@ else if(flagLocal==1)
      if((c==10)&&((itr1==2)||(itr1==14)))
      getpoint=getpoint*3;
 
-   if((c==2)&&((itr1==2)||(itr1==14)))
+
+
+       if((c==2)&&((itr1==2)||(itr1==14)))
         doubleWord=doubleWord+1;
        if((c==3)&&((itr1==3)||(itr1==13)))
         doubleWord=doubleWord+1;
@@ -677,7 +662,9 @@ else if(flagLocal==1)
        if((c==14)&&((itr1==2)||(itr1==14)))
            doubleWord=doubleWord+1;
 
-         if((c==1)&&((itr1==1)||(itr1==8)||(itr1==15)))
+
+
+  if((c==1)&&((itr1==1)||(itr1==8)||(itr1==15)))
     tripleWord=tripleWord+1;
   if((c==8)&&((itr1==1)||(itr1==15)))
       tripleWord=tripleWord+1;
@@ -690,6 +677,7 @@ else if(flagLocal==1)
   point1=point1+getpoint;
             }
 }   // ( d<f ) ends here
+
 if(f<d)
         {for(itr1=d;itr1>=f;itr1--)
             { getpoint=0;
@@ -756,7 +744,9 @@ if(f<d)
                         case '_':  getpoint=0;  break;
                         default:  cout<<"\nNon-allowed character\nencountered";
                     }
-if((c==1)&&((itr1==4)||(itr1==12)))
+
+
+       if((c==1)&&((itr1==4)||(itr1==12)))
      getpoint=getpoint*2;
        if((c==8)&&((itr1==4)||(itr1==12)))
      getpoint=getpoint*2;
@@ -782,7 +772,8 @@ if((c==1)&&((itr1==4)||(itr1==12)))
        if((c==9)&&((itr1==9)||(itr1==13)))
      getpoint=getpoint*2;
 
-   if((c==2)&&((itr1==6)||(itr1==10)))
+
+     if((c==2)&&((itr1==6)||(itr1==10)))
      getpoint=getpoint*3;
      if((c==14)&&((itr1==6)||(itr1==10)))
      getpoint=getpoint*3;
@@ -795,7 +786,9 @@ if((c==1)&&((itr1==4)||(itr1==12)))
      if((c==10)&&((itr1==2)||(itr1==14)))
      getpoint=getpoint*3;
 
-   if((c==2)&&((itr1==2)||(itr1==14)))
+
+
+       if((c==2)&&((itr1==2)||(itr1==14)))
         doubleWord=doubleWord+1;
        if((c==3)&&((itr1==3)||(itr1==13)))
         doubleWord=doubleWord+1;
@@ -814,7 +807,9 @@ if((c==1)&&((itr1==4)||(itr1==12)))
        if((c==14)&&((itr1==2)||(itr1==14)))
            doubleWord=doubleWord+1;
 
-         if((c==1)&&((itr1==1)||(itr1==8)||(itr1==15)))
+
+
+  if((c==1)&&((itr1==1)||(itr1==8)||(itr1==15)))
     tripleWord=tripleWord+1;
   if((c==8)&&((itr1==1)||(itr1==15)))
       tripleWord=tripleWord+1;
@@ -826,9 +821,8 @@ if((c==1)&&((itr1==4)||(itr1==12)))
 //-------------------------------
   point1=point1+getpoint;
             }
-            }   // ( f<d ) ends here
-
-            if(doubleWord>0)
+}   // ( f<d ) ends here
+      if(doubleWord>0)
       {
           for(itr3=doubleWord;itr3>0;itr3--)
           {
@@ -847,7 +841,9 @@ if((c==1)&&((itr1==4)||(itr1==12)))
 //----------------------------------
      score1=score1+point1;
      }
-     fout.close();
+
+
+fout.close();
 }
 getch();
 clrscr(); cleardevice();
@@ -864,7 +860,8 @@ if(allScore==3){scoreUser4=score1;}
 
      }                                   //if(c==e) ends here
 
-     //___________if(d==f)_______________________starts here
+
+//___________if(d==f)_______________________starts here
 if(d==f)
      {
 
@@ -872,7 +869,7 @@ if(d==f)
                 {for(itr1=c,itr2=0;itr1<=e;itr1++,itr2++)
                     {  wordForm[itr2]=orig[itr1][d];  wordForm[itr2+1]='\0';}
                 }
-                else if(e<c)
+         else if(e<c)
            {
             for(itr1=c,itr2=0;itr1>=e;itr1--,itr2++)
                     {   wordForm[itr2]=orig[itr1][d]; wordForm[itr2+1]='\0';}
@@ -880,7 +877,6 @@ if(d==f)
 
           strlwr(wordForm);
           cout<<"\n____________________\n"<<wordForm<<"\n____________________";
-
 for(itrTest=0;itrTest<=testNumber;itrTest++)
 {
     if(strcmp(wordForm,test[itrTest])==0)
@@ -905,8 +901,7 @@ while(!fout.eof())
          }
 
     }
-
-    if(flagLocal==0)
+if(flagLocal==0)
 {cout<<"\nWord not found in dictionary!!!!!\n 0 points for this word";}
 else if(flagLocal==1)
     {    int doubleWord=0,tripleWord=0;     itr3=0; itr4=0;
@@ -977,6 +972,8 @@ else if(flagLocal==1)
                         default:  cout<<"\nNon-allowed character\nencountered";
                     }
 
+
+
        if((itr1==1)&&((d==4)||(d==12)))
      getpoint=getpoint*2;
        if((itr1==8)&&((d==4)||(d==12)))
@@ -1004,6 +1001,8 @@ else if(flagLocal==1)
      getpoint=getpoint*2;
 
 
+
+
        if((itr1==2)&&((d==6)||(d==10)))
      getpoint=getpoint*3;
      if((itr1==14)&&((d==6)||(d==10)))
@@ -1016,6 +1015,7 @@ else if(flagLocal==1)
      getpoint=getpoint*3;
      if((itr1==10)&&((d==2)||(d==14)))
      getpoint=getpoint*3;
+
 
 
        if((itr1==2)&&((d==2)||(d==14)))
@@ -1038,6 +1038,7 @@ else if(flagLocal==1)
            doubleWord=doubleWord+1;
 
 
+
   if((itr1==1)&&((d==1)||(d==8)||(d==15)))
     tripleWord=tripleWord+1;
   if((itr1==8)&&((d==1)||(d==15)))
@@ -1052,7 +1053,8 @@ else if(flagLocal==1)
   point1=point1+getpoint;
             }
     }          //  (c<e  ends here)
-else if(e<c)
+
+  else if(e<c)
         {for(itr1=c;itr1>=e;itr1--)
             { getpoint=0;
               switch(orig[itr1][d])
@@ -1119,7 +1121,9 @@ else if(e<c)
                         default:  cout<<"\nNon-allowed character\nencountered";
                     }
 
-if((itr1==1)&&((d==4)||(d==12)))
+
+
+       if((itr1==1)&&((d==4)||(d==12)))
      getpoint=getpoint*2;
        if((itr1==8)&&((d==4)||(d==12)))
      getpoint=getpoint*2;
@@ -1147,7 +1151,8 @@ if((itr1==1)&&((d==4)||(d==12)))
 
 
 
-   if((itr1==2)&&((d==6)||(d==10)))
+
+       if((itr1==2)&&((d==6)||(d==10)))
      getpoint=getpoint*3;
      if((itr1==14)&&((d==6)||(d==10)))
      getpoint=getpoint*3;
@@ -1161,7 +1166,8 @@ if((itr1==1)&&((d==4)||(d==12)))
      getpoint=getpoint*3;
 
 
-     if((itr1==2)&&((d==2)||(d==14)))
+
+       if((itr1==2)&&((d==2)||(d==14)))
         doubleWord=doubleWord+1;
        if((itr1==3)&&((d==3)||(d==13)))
         doubleWord=doubleWord+1;
@@ -1181,12 +1187,14 @@ if((itr1==1)&&((d==4)||(d==12)))
            doubleWord=doubleWord+1;
 
 
-if((itr1==1)&&((d==1)||(d==8)||(d==15)))
+
+  if((itr1==1)&&((d==1)||(d==8)||(d==15)))
     tripleWord=tripleWord+1;
   if((itr1==8)&&((d==1)||(d==15)))
       tripleWord=tripleWord+1;
   if((itr1==15)&&((d==1)||(d==8)||(d==15)))
        tripleWord=tripleWord+1;
+
 
 
 
@@ -1232,6 +1240,8 @@ if(allScore==3){scoreUser4=score1;}
 
 
      }
+//_________if(d==f)_______________________ends here
+                                          //if(const!=y)  ends here
 
 }
 //________________________________________________
@@ -1317,7 +1327,6 @@ void game::coor(char inp,char orig[15][15])
                             orig[a][b]=inp; // input of coordinates
 }             // coordinate function
 
-
 //____________________________________________________
 //_____________alpha input function___________________
 char game::input(char orig[15][15])
@@ -1373,6 +1382,7 @@ leng1++;
        for(itr2=0;itr2<16;itr2++)
       orig[itr1][itr2]=' ';
     }
+
 //______________________________________________
 //_____________________board__drawing__function________________________
 void game::boardnum(char orig[15][15])
@@ -1383,7 +1393,7 @@ void game::boardnum(char orig[15][15])
       { line(210,10+(itr1*25)-12,610-13,10+(itr1*25)-12);
          line(210+(itr1*25)-13,10,210+(itr1*25)-13,410-12);
       }
-  setcolor(BLUE);
+setcolor(BLUE);
 
     outtextxy(390+200-13,7,"15");  outtextxy(40+200-13,7,"1"); outtextxy(65+200-13,7,"2");
     outtextxy(90+200-13,7,"3");  outtextxy(115+200-13,7,"4"); outtextxy(140+200-13,7,"5");
@@ -1407,6 +1417,7 @@ setcolor(LIGHTGREEN);   setfillstyle(SOLID_FILL,LIGHTGREEN);
 
 
 }
+
 
 setcolor(LIGHTMAGENTA);   setfillstyle(SOLID_FILL,LIGHTMAGENTA);
  {
@@ -1461,7 +1472,6 @@ setcolor(LIGHTRED);  setfillstyle(SOLID_FILL,LIGHTRED);
   floodfill(220+(200)-13,20+(375)-12,RED);   floodfill(220+(375)-13,20+(200)-12,RED);
 }
 
-
 setcolor(LIGHTBLUE);  setfillstyle(SOLID_FILL,LIGHTBLUE);
 {
 floodfill(220+(150)-13,20+(50)-12,RED);   floodfill(220+(250)-13,20+(50)-12,RED);
@@ -1472,7 +1482,6 @@ floodfill(220+(250)-13,20+(250)-12,RED);   floodfill(220+(350)-13,20+(250)-12,RE
 floodfill(220+(150)-13,20+(350)-12,RED);   floodfill(220+(250)-13,20+(350)-12,RED);
 
  }
-
 
 setcolor(BLACK);
 
@@ -1559,8 +1568,9 @@ for(itr1=0;itr1<16;itr1++)
         case 'z':  outtextxy(220+(itr1*25)-13,20+(itr2*25)-12,"Z");
        break;
        }
-    }
   }
+    }
+
 setcolor(BLUE);
 rectangle(220,435+5,240,455+5);
 
@@ -1596,7 +1606,6 @@ line(210,460+5,630,460+5);
 line(210,460+6,630,460+6);
 setcolor(WHITE);
 outtextxy(320,470,"Created by MAUSAM SHARMA");
-
 
 char TEXT[5];
 if(userNumber==2)
@@ -1652,4 +1661,3 @@ fflush(stdin);
 
 }
 //_______________________________________________
-
