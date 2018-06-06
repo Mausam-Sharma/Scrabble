@@ -1597,5 +1597,59 @@ line(210,460+6,630,460+6);
 setcolor(WHITE);
 outtextxy(320,470,"Created by MAUSAM SHARMA");
 
+
+char TEXT[5];
+if(userNumber==2)
+{
+setcolor(RED);
+outtextxy(380,412,"{SCORES)");
+setcolor(WHITE);
+ outtextxy(245,405,names[0]);
+ sprintf(TEXT,"%d",scoreUser1); outtextxy(220,405,TEXT); outtextxy(235,405,":");
+fflush(stdin);
+ outtextxy(475,405,names[1]);
+ sprintf(TEXT,"%d",scoreUser2); outtextxy(450,405,TEXT); outtextxy(465,405,":");
+fflush(stdin);
+
 }
+
+if(userNumber==3)
+{
+setcolor(RED);
+outtextxy(380,412,"{SCORES)");
+setcolor(WHITE);
+ outtextxy(245,405,names[0]);
+ sprintf(TEXT,"%d",scoreUser1); outtextxy(220,405,TEXT); outtextxy(235,405,":");
+fflush(stdin);
+ outtextxy(475,405,names[1]);
+ sprintf(TEXT,"%d",scoreUser2); outtextxy(450,405,TEXT); outtextxy(465,405,":");
+fflush(stdin);
+ outtextxy(245,420,names[2]);
+ sprintf(TEXT,"%d",scoreUser3); outtextxy(220,420,TEXT); outtextxy(235,420,":");
+fflush(stdin);
+
+}
+
+
+if(userNumber==4)
+{
+setcolor(RED);
+outtextxy(380,412,"{SCORES)");
+setcolor(WHITE);
+ outtextxy(245,405,names[0]);
+ sprintf(TEXT,"%d",scoreUser1); outtextxy(220,405,TEXT); outtextxy(235,405,":");
+fflush(stdin);
+ outtextxy(475,405,names[1]);
+ sprintf(TEXT,"%d",scoreUser2); outtextxy(450,405,TEXT); outtextxy(465,405,":");
+fflush(stdin);
+ outtextxy(245,420,names[2]);
+ sprintf(TEXT,"%d",scoreUser3); outtextxy(220,420,TEXT); outtextxy(235,420,":");
+fflush(stdin);
+ outtextxy(475,420,names[3]);
+ sprintf(TEXT,"%d",scoreUser4); outtextxy(450,420,TEXT); outtextxy(465,420,":");
+fflush(stdin);
+}
+
+}
+//_______________________________________________
 
