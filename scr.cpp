@@ -1561,7 +1561,41 @@ for(itr1=0;itr1<16;itr1++)
        }
     }
   }
+setcolor(BLUE);
+rectangle(220,435+5,240,455+5);
 
+setcolor(WHITE);
+rectangle(315,435+5,335,455+5);
+
+rectangle(410,435+5,430,455+5);
+rectangle(505,435+5,525,455+5);
+
+setcolor(WHITE);
+outtextxy(250,438+5,"Double");
+outtextxy(250,448+5,"letter");
+outtextxy(345,438+5,"Triple");
+outtextxy(345,448+5,"letter");
+outtextxy(440,438+5,"Double");
+outtextxy(440,448+5,"word");
+outtextxy(535,438+5,"Triple");
+outtextxy(535,448+5,"word");
+
+setcolor(WHITE);
+setfillstyle(SOLID_FILL,WHITE);
+floodfill(230,445+5,BLUE);
+setcolor(BLUE);
+setfillstyle(SOLID_FILL,BLUE);
+floodfill(325,445+5,WHITE);
+setcolor(MAGENTA);
+setfillstyle(SOLID_FILL,MAGENTA);
+floodfill(420,445+5,WHITE);
+setcolor(RED);
+setfillstyle(SOLID_FILL,RED);
+floodfill(515,445+5,WHITE);
+line(210,460+5,630,460+5);
+line(210,460+6,630,460+6);
+setcolor(WHITE);
+outtextxy(320,470,"Created by MAUSAM SHARMA");
 
 }
 
